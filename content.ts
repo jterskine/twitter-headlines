@@ -6,10 +6,9 @@ export const config: PlasmoCSConfig = {
 }
 
 function createHTMLElements(cardWrapper: any) {
-  const ariaLabelElement = cardWrapper.querySelector('[aria-label]');
-  if (ariaLabelElement) {
-    const ariaLabel = ariaLabelElement.getAttribute('aria-label');
-    
+  const anchorElement = cardWrapper.querySelector('a[aria-label]');
+  if (anchorElement) {
+    const ariaLabel = anchorElement.getAttribute('aria-label');
     // probably can be more robust, example: 
     // aria-label="nytimes.com The Best Emergency Weather Radio"
     // aria-label="axios.com X stops showing headlines after Musk update demand"
@@ -25,27 +24,28 @@ function createHTMLElements(cardWrapper: any) {
     newDiv.style.minHeight = '55px'; 
     newDiv.style.zIndex = '1';
 
-    // Create headline and tagline divs
     const headline = document.createElement('div');
     headline.textContent = headlineText;
     headline.style.margin = '5px 10px';
     headline.style.color = '#5A636A';
     headline.style.fontFamily = '"TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-    headline.tabIndex = 0;
 
     const tagline = document.createElement('div');
     tagline.textContent = taglineText;
     tagline.style.margin = '5px 10px 10px 10px';
     tagline.style.color = '#2B2C30';
     tagline.style.fontFamily = '"TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-    headline.tabIndex = 0;
 
     newDiv.appendChild(headline);
     newDiv.appendChild(tagline);
 
-    const imageElement = cardWrapper.querySelector('img');
+    anchorElement.removeAttribute('tabindex');
+    anchorElement.appendChild(newDiv);
+  }
 
-    cardWrapper.appendChild(newDiv, imageElement);
+  const ariaHiddenElement = cardWrapper.querySelector('[data-testid="card.layoutLarge.media"]');
+  if (ariaHiddenElement) {
+    ariaHiddenElement.removeAttribute('aria-hidden');
   }
 }
 
