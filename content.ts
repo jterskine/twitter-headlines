@@ -31,12 +31,14 @@ function createHTMLElements(cardWrapper: any) {
     headline.style.margin = '5px 10px';
     headline.style.color = '#5A636A';
     headline.style.fontFamily = '"TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+    headline.tabIndex = 0;
 
     const tagline = document.createElement('div');
     tagline.textContent = taglineText;
     tagline.style.margin = '5px 10px 10px 10px';
     tagline.style.color = '#2B2C30';
     tagline.style.fontFamily = '"TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+    headline.tabIndex = 0;
 
     newDiv.appendChild(headline);
     newDiv.appendChild(tagline);
