@@ -1,8 +1,8 @@
 {
   "name": "twitter-headline",
-  "displayName": "Twitter headline",
-  "version": "0.0.1",
-  "description": "Bring back headlines",
+  "displayName": "Twitter headlines",
+  "version": "0.0.2",
+  "description": "Bring back headlines to Twitter and fix accessibility issues",
   "author": "joey",
   "engines": {
     "npm": ">=7.0.0",
