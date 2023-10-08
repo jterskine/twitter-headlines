@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
+    "build:firefox": "plasmo build --no-minify",
     "package": "plasmo package"
   },
   "dependencies": {
@@ -30,6 +31,11 @@
   "manifest": {
     "host_permissions": [
       "https://twitter.com/*"
-    ]
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "joeterskine@gmail.com"
+      }
+    }
   }
 }
