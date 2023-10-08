@@ -8,6 +8,13 @@
     "npm": ">=7.0.0",
     "node": ">=16.0.0"
   },
+  "targets": {
+    "default": {
+      "engines": {
+        "browsers": "last 2 versions, not dead, > 0.2%"
+      }
+    }
+  },
   "scripts": {
     "dev": "plasmo dev",
     "build": "plasmo build",
