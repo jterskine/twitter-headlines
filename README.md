@@ -1,3 +1,7 @@
+This extension is no longer needed! Elon [relented](https://thehill.com/policy/technology/4385689-x-brings-back-news-headlines-in-user-posts/), probably due users like you downloading this extension. We did it :)
+
+------
+
 Bring back headlines to your twitter
 
 <img width="591" src="https://github.com/fictivekin/chippy/assets/2965738/b76a0d99-08e8-4726-829d-e1a8b22a4a32" alt="Screenshot of a tweet from Axios that says:  'You probably don't see a headline on this link right now. That's because X began removing news links and headlines from posts.' But after the extension installed, the headline is in fact shown">
